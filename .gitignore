@@ -1,5 +1,5 @@
+# ignore ALL files in ANY directory named temp
+node_modules
+
 # ignore ALL .log files
 *.env
-
-# ignore ALL files in ANY directory named temp
-node_modules/
