@@ -1,0 +1,11 @@
+<%- include('./includes/header.ejs'); %>
+<body>
+    <div class="contact">
+        <form method="POST" action="/contato/cadastro" class="contact__item">
+            <input class="form-control" type="text" name="nome" placeholder="Digite seu nome">
+            <input class="form-control" type="email" name="email" placeholder="Digite seu e-mail">
+            <input class="form-control" type="tel" name="telefone" placeholder="(00) 0000-0000">
+            <button class="btn-send" type="submit" name="enviar">Salvar</button>
+        </form>
+    </div>
+<%- include('./includes/footer.ejs'); %>

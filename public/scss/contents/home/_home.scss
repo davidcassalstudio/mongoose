@@ -1,0 +1,24 @@
+.table {
+    .table__item {
+        border-collapse: collapse;
+        thead {
+            tr {
+                th {
+                    padding: 15px;
+                    border: solid 1px #cecece;
+                    background-color: #1e1e1e;
+                    color: $white;
+                }
+            }
+        }
+
+        tbody {
+            tr {
+                td {
+                    padding: 15px;
+                    border: solid 1px #cecece;
+                }
+            }
+        }
+    }
+}
