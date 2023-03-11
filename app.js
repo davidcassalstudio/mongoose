@@ -27,6 +27,14 @@ app.set('view engine', 'ejs');
 app.use(express.static(path.join(__dirname,'public')));
 app.use(express.urlencoded({extended: true}));
 
+
+
+app.router('/', (req,res,next) => {
+    res.json({
+        message:"ok"
+    })
+})
+
 // Routes
 app.use(homeRouter);
 app.use(contatoRouter);

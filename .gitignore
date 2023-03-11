@@ -3,3 +3,4 @@ node_modules
 
 # ignore ALL .log files
 *.env
+.vercel
