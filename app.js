@@ -6,7 +6,7 @@ const contatoRouter = require('./routes/contato/contato');
 const loginRouter   = require('./routes/login/login.routes');
 const path          = require('path');
 const mongoose      = require('mongoose');
-require('dotenv').config()
+
 
 // console.log(process.env.USER)
 // console.log(process.env.PASS)
