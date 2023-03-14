@@ -6,3 +6,26 @@ exports.getHome = async (req, res, next) => {
     res.render('home', {contatos})
 }
 
+exports.deleteItem = async (req, res, next) => {
+    const id = req.params.id;
+    
+    if(id){
+        await Contatos.deleteOne({_id: id})
+        .then(data => {
+            res.redirect('/home')
+        })
+        .catch(err => {
+            console.log('Ocorreu um erro, tente novamente mais tarde.')
+        })
+    }
+    
+    // if(id){
+    //     await Contatos.deleteOne({_id: id})
+    //         .then(response => {
+    //             res.redirect('/')
+    //         })
+    //         .catch(err => {
+    //             console.error('')
+    //         })
+    // }
+}

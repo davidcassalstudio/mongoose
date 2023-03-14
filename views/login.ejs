@@ -1,0 +1,10 @@
+<%- include('./includes/header.ejs'); %>
+<body>
+    <div class="contact">
+        <form method="POST" action="/login/criar" class="contact__item">
+            <input class="form-control" type="email" name="email" placeholder="Digite seu e-mail">
+            <input class="form-control" type="password" name="senha" placeholder="****">
+            <button class="btn-send" type="submit" name="entrar">Entrar</button>
+        </form>
+    </div>
+<%- include('./includes/footer.ejs'); %>

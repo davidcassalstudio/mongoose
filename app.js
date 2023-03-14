@@ -3,6 +3,7 @@ const app           = express();
 const PORT          = process.env.PORT || 3000;
 const homeRouter    = require('./routes/home/home');
 const contatoRouter = require('./routes/contato/contato');
+const loginRouter   = require('./routes/login/login.routes');
 const path          = require('path');
 const mongoose      = require('mongoose');
 require('dotenv').config()
@@ -28,14 +29,8 @@ app.use(express.static(path.join(__dirname,'public')));
 app.use(express.urlencoded({extended: true}));
 
 
-
-app.router('/', (req,res,next) => {
-    res.json({
-        message:"ok"
-    })
-})
-
 // Routes
+app.use(loginRouter);
 app.use(homeRouter);
 app.use(contatoRouter);
 

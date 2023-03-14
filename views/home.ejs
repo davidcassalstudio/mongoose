@@ -10,6 +10,7 @@
                     <th>Nome</th>
                     <th>E-mail</th>
                     <th>Telefone</th>
+                    <th>Ações</th>
                 </tr>
             </thead>
 
@@ -19,6 +20,10 @@
                         <td><%- contato.nome; %></td>
                         <td><%- contato.email; %></td>
                         <td><%- contato.telefone; %></td>
+                        <td>
+                            <a href="/editar-contato/<%- contato._id; %>">Editar</a>
+                            <a href="/delete-item/<%- contato._id; %>">Deletar</a>
+                        </td>
                     </tr>
                 <% }) %>
             </tbody>

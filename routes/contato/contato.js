@@ -1,8 +1,10 @@
 const express = require('express');
 const router  = express.Router();
-const homeController = require('../../controller/contato.controller');
+const contatoController = require('../../controller/contato.controller');
 
-router.get('/contato', homeController.getContato)
-router.post('/contato/cadastro', homeController.postContato)
+router.get('/contato', contatoController.getContato)
+router.post('/contato/cadastro', contatoController.postContato)
+router.get('/editar-contato/:id', contatoController.getEditar)
+router.post('/editar-contato/editar', contatoController.postEditar)
 
 module.exports = router;
