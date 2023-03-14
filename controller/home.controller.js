@@ -3,7 +3,7 @@ const Contatos = require('../model/contatos.model');
 exports.getHome = async (req, res, next) => {
     const contatos = await Contatos.find();
 
-    res.render('home', {contatos})
+    res.render('home', {contatos}); 
 }
 
 exports.deleteItem = async (req, res, next) => {
@@ -12,10 +12,10 @@ exports.deleteItem = async (req, res, next) => {
     if(id){
         await Contatos.deleteOne({_id: id})
         .then(data => {
-            res.redirect('/home')
+            res.redirect('/home');
         })
         .catch(err => {
-            console.log('Ocorreu um erro, tente novamente mais tarde.')
+            console.log('Ocorreu um erro, tente novamente mais tarde.');
         })
     }
     
