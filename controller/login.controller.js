@@ -10,7 +10,7 @@ exports.postLogin = async (req, res, next) => {
     await Login.find({ $and: [ { email: email }, { senha: senha } ] })
         .then(data => {
             if(data.length > 0){
-                res.redirect('/home')
+                res.redirect('/')
             }else if(data.length <= 0){
                 res.redirect('/login')
             }

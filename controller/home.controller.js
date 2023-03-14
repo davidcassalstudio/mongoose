@@ -12,7 +12,7 @@ exports.deleteItem = async (req, res, next) => {
     if(id){
         await Contatos.deleteOne({_id: id})
         .then(data => {
-            res.redirect('/home');
+            res.redirect('/');
         })
         .catch(err => {
             console.log('Ocorreu um erro, tente novamente mais tarde.');

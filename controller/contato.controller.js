@@ -11,7 +11,7 @@ exports.postContato = (req, res, next) => {
         telefone: req.body.telefone 
     })
     .then(response => {
-        res.redirect('/home')
+        res.redirect('/')
     }).catch(error => {
         console.error('Algo aconteceu, tente novamente mais tarde.')
     })
@@ -30,7 +30,7 @@ exports.postEditar = (req, res, next) => {
         telefone: req.body.telefone 
     })
     .then(response => {
-        res.redirect('/home')
+        res.redirect('/')
     }).catch(error => {
         console.error('Algo aconteceu, tente novamente mais tarde.')
     })
